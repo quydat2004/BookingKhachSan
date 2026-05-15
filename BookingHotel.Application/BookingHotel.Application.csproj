@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BookingHotel.Domain\BookingHotel.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Features\Auth\" />
+    <Folder Include="Features\Hotels\" />
+    <Folder Include="Features\Users\" />
+    <Folder Include="Features\Vouchers\" />
+    <Folder Include="Features\Reviews\" />
+    <Folder Include="Features\Payments\" />
+    <Folder Include="Features\Rooms\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Validators\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+</Project>
