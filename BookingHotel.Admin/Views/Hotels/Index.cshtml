@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Khách sạn";
+    ViewData["Subtitle"] = "Trang sơ bộ cho danh mục khách sạn";
+}
+
+<section class="stat-grid">
+    <article class="stat-card"><span>Tổng khách sạn</span><strong>86</strong><small>Mock data</small></article>
+    <article class="stat-card"><span>Đang hoạt động</span><strong>72</strong><small>Public</small></article>
+    <article class="stat-card"><span>Chờ duyệt</span><strong>9</strong><small>Pending</small></article>
+    <article class="stat-card"><span>Tạm ẩn</span><strong>5</strong><small>Inactive</small></article>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div><h2>Khách sạn mẫu</h2><p>Chỉ làm sơ, chưa đi sâu quản trị phòng/tiện nghi.</p></div>
+    </div>
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead><tr><th>Khách sạn</th><th>Thành phố</th><th>Quản lý</th><th>Rating</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Prestige Sài Gòn</strong></td><td>TP. Hồ Chí Minh</td><td>Lê Quang Dũng</td><td>4.7</td><td><span class="badge-soft badge-completed">Active</span></td><td><button class="btn-preview">Chi tiết</button></td></tr>
+                <tr><td><strong>Hue Riverside Hotel</strong></td><td>Huế</td><td>Ngô Minh Phúc</td><td>4.4</td><td><span class="badge-soft badge-completed">Active</span></td><td><button class="btn-preview">Chi tiết</button></td></tr>
+                <tr><td><strong>Đà Nẵng Ocean View</strong></td><td>Đà Nẵng</td><td>Trần Hải Nam</td><td>4.8</td><td><span class="badge-soft badge-pending">Pending</span></td><td><button class="btn-preview success">Duyệt</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>

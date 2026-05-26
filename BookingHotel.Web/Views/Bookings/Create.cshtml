@@ -1,0 +1,48 @@
+@{
+    ViewData["Title"] = "Tạo booking";
+}
+
+<section class="page-hero">
+    <div class="container">
+        <span class="section-subtitle">Booking flow</span>
+        <h1>Hoàn tất đặt phòng</h1>
+        <p class="text-muted mb-0">Form HTML tĩnh cho bước xác nhận booking.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="content-card p-4 mb-4">
+                    <h3 class="fw-bold">Thông tin khách sạn</h3>
+                    <div class="room-row mt-3"><div><h4 class="fw-bold">Prestige Sài Gòn</h4><p class="text-muted mb-0">Deluxe King · Quận 1, TP. Hồ Chí Minh</p></div><span class="badge-soft badge-confirmed">Còn phòng</span></div>
+                </div>
+                <div class="content-card p-4 mb-4">
+                    <h3 class="fw-bold">Thời gian lưu trú</h3>
+                    <div class="row g-3 mt-1"><div class="col-md-6"><div class="form-preview">Ngày nhận phòng: 10/06/2026</div></div><div class="col-md-6"><div class="form-preview">Ngày trả phòng: 12/06/2026</div></div></div>
+                </div>
+                <div class="content-card p-4 mb-4">
+                    <h3 class="fw-bold">Chọn phòng</h3>
+                    <div class="room-row mt-3"><div><h4 class="fw-bold">Deluxe King</h4><p class="text-muted mb-0">1 giường king · 2 khách · 35m²</p></div><div class="text-lg-end"><div class="price">1.200.000₫/đêm</div><span class="badge-soft badge-completed">Đã chọn</span></div></div>
+                    <div class="room-row"><div><h4 class="fw-bold">Premium Twin</h4><p class="text-muted mb-0">2 giường đơn · 2 khách · 38m²</p></div><div class="text-lg-end"><div class="price">1.450.000₫/đêm</div><button class="btn btn-outline-primary rounded-pill">Chọn</button></div></div>
+                </div>
+                <div class="content-card p-4">
+                    <h3 class="fw-bold">Thông tin khách</h3>
+                    <div class="row g-3 mt-1"><div class="col-md-6"><div class="form-preview">Nguyễn Minh Anh</div></div><div class="col-md-6"><div class="form-preview">2 khách</div></div><div class="col-12"><div class="form-preview">Yêu cầu đặc biệt: Phòng tầng cao, yên tĩnh</div></div><div class="col-md-8"><div class="form-preview">Mã giảm giá: WELCOME10</div></div><div class="col-md-4"><button class="btn btn-outline-primary w-100 h-100 rounded-4">Áp dụng</button></div></div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <aside class="content-card summary-card">
+                    <h3 class="fw-bold">Tóm tắt booking</h3>
+                    <div class="summary-line"><span>Deluxe King x 2 đêm</span><strong>2.400.000₫</strong></div>
+                    <div class="summary-line"><span>Giảm giá</span><strong class="text-success">-120.000₫</strong></div>
+                    <div class="summary-line"><span>Thuế phí</span><strong>228.000₫</strong></div>
+                    <div class="summary-line"><span>Tổng thanh toán</span><strong class="summary-total">2.508.000₫</strong></div>
+                    <a class="btn btn-primary btn-lg w-100 rounded-pill mt-3" asp-controller="Payments" asp-action="Process">Xác nhận booking</a>
+                    <p class="text-muted small mt-3 mb-0">Sau khi xác nhận, khách chuyển sang bước thanh toán.</p>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>

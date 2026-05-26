@@ -1,0 +1,81 @@
+@{
+    ViewData["Title"] = "Khách sạn";
+}
+
+<section class="page-hero">
+    <div class="container">
+        <span class="section-subtitle">Khám phá</span>
+        <h1>Danh sách khách sạn</h1>
+        <p class="text-muted mb-0">Tìm khách sạn phù hợp theo điểm đến, ngày ở và ngân sách.</p>
+    </div>
+</section>
+
+<div class="container">
+    <section class="card-soft filter-card">
+        <div class="row g-3">
+            <div class="col-lg-3 col-md-6"><div class="form-preview">Điểm đến: Đà Nẵng</div></div>
+            <div class="col-lg-2 col-md-6"><div class="form-preview">Nhận phòng</div></div>
+            <div class="col-lg-2 col-md-6"><div class="form-preview">Trả phòng</div></div>
+            <div class="col-lg-2 col-md-6"><div class="form-preview">2 khách</div></div>
+            <div class="col-lg-2 col-md-6"><div class="form-preview">4-5 sao</div></div>
+            <div class="col-lg-1 col-md-6"><button class="btn btn-primary w-100 h-100 rounded-4">Lọc</button></div>
+        </div>
+    </section>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+            <div><strong>24 khách sạn</strong><span class="text-muted"> phù hợp với tìm kiếm</span></div>
+            <div class="form-preview">Sắp xếp: Giá tốt nhất</div>
+        </div>
+
+        <article class="hotel-list-item card-soft">
+            <div class="hotel-image">Prestige Sài Gòn</div>
+            <div class="hotel-content">
+                <div class="d-flex justify-content-between gap-3 flex-wrap">
+                    <div>
+                        <div class="rating">★★★★★ <span class="text-muted">4.8 · 128 đánh giá</span></div>
+                        <h2 class="hotel-name">Prestige Sài Gòn</h2>
+                        <p class="text-muted">Quận 1, TP. Hồ Chí Minh · Hồ bơi · Spa · Nhà hàng</p>
+                        <p>Khách sạn trung tâm, phù hợp công tác và du lịch ngắn ngày.</p>
+                    </div>
+                    <div class="text-lg-end"><span class="text-muted">Từ</span><div class="price">1.200.000₫</div><span class="text-muted">/đêm</span></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mt-3"><span class="badge-soft badge-completed">Xác nhận nhanh</span><a class="btn btn-primary rounded-pill" asp-controller="Hotels" asp-action="Details">Xem chi tiết</a></div>
+            </div>
+        </article>
+
+        <article class="hotel-list-item card-soft">
+            <div class="hotel-image">Hue Riverside Hotel</div>
+            <div class="hotel-content">
+                <div class="d-flex justify-content-between gap-3 flex-wrap">
+                    <div>
+                        <div class="rating">★★★★☆ <span class="text-muted">4.6 · 96 đánh giá</span></div>
+                        <h2 class="hotel-name">Hue Riverside Hotel</h2>
+                        <p class="text-muted">Huế · View sông Hương · Buffet sáng · Xe đưa đón</p>
+                        <p>Không gian yên tĩnh, gần trung tâm và các điểm tham quan.</p>
+                    </div>
+                    <div class="text-lg-end"><span class="text-muted">Từ</span><div class="price">950.000₫</div><span class="text-muted">/đêm</span></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mt-3"><span class="badge-soft badge-confirmed">Được đặt nhiều</span><a class="btn btn-primary rounded-pill" asp-controller="Hotels" asp-action="Details">Xem chi tiết</a></div>
+            </div>
+        </article>
+
+        <article class="hotel-list-item card-soft">
+            <div class="hotel-image">Đà Nẵng Ocean View</div>
+            <div class="hotel-content">
+                <div class="d-flex justify-content-between gap-3 flex-wrap">
+                    <div>
+                        <div class="rating">★★★★★ <span class="text-muted">4.9 · 203 đánh giá</span></div>
+                        <h2 class="hotel-name">Đà Nẵng Ocean View</h2>
+                        <p class="text-muted">Mỹ Khê, Đà Nẵng · View biển · Family suite · Gym</p>
+                        <p>Resort ven biển cho gia đình, nhiều loại phòng sức chứa lớn.</p>
+                    </div>
+                    <div class="text-lg-end"><span class="text-muted">Từ</span><div class="price">1.800.000₫</div><span class="text-muted">/đêm</span></div>
+                </div>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mt-3"><span class="badge-soft badge-completed">Ưu đãi hè</span><a class="btn btn-primary rounded-pill" asp-controller="Hotels" asp-action="Details">Xem chi tiết</a></div>
+            </div>
+        </article>
+    </div>
+</section>

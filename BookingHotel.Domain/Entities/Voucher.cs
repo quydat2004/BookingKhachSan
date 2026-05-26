@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Entities;
 
-namespace BookingHotel.Domain.Entities
+public class Voucher : Common.BaseEntity
 {
-    internal class Voucher
-    {
-    }
+    public string VoucherCode { get; set; } = string.Empty;
+    public string DiscountType { get; set; } = string.Empty;
+    public decimal DiscountValue { get; set; }
+    public decimal? MinOrderAmount { get; set; }
+    public decimal? MaxDiscount { get; set; }
+    public DateTime ValidFrom { get; set; }
+    public DateTime ValidTo { get; set; }
+    public int? UsageLimit { get; set; }
+    public int UsedCount { get; set; }
+    public bool IsActive { get; set; } = true;
+
+    public ICollection<BookingVoucher> BookingVouchers { get; set; } = new List<BookingVoucher>();
 }

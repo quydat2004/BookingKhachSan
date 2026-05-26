@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Entities;
 
-namespace BookingHotel.Domain.Entities
+public class Role : Common.BaseEntity
 {
-    internal class Role
-    {
-    }
+    public string RoleName { get; set; } = string.Empty;
+    public string? Description { get; set; }
+    public bool IsActive { get; set; } = true;
+
+    public ICollection<User> Users { get; set; } = new List<User>();
 }

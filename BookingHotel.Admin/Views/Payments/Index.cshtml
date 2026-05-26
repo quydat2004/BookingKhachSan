@@ -1,0 +1,151 @@
+@{
+    ViewData["Title"] = "Quản lý thanh toán";
+    ViewData["Subtitle"] = "Theo dõi giao dịch VNPay, MoMo, tiền mặt và trạng thái đối soát";
+}
+
+<section class="stat-grid">
+    <article class="stat-card"><span>Doanh thu hôm nay</span><strong>86.400.000₫</strong><small>28 giao dịch</small></article>
+    <article class="stat-card"><span>Đã thanh toán</span><strong>124</strong><small>Tháng này</small></article>
+    <article class="stat-card"><span>Chờ xử lý</span><strong>9</strong><small>Cần kiểm tra</small></article>
+    <article class="stat-card"><span>Thất bại / hoàn tiền</span><strong>6</strong><small>Theo dõi thủ công</small></article>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Bộ lọc thanh toán</h2>
+            <p>HTML preview, chưa kết nối gateway.</p>
+        </div>
+        <button class="btn-preview primary">Đối soát nhanh</button>
+    </div>
+    <div class="filter-bar">
+        <div class="form-preview">Mã giao dịch, mã booking...</div>
+        <div class="form-preview">Phương thức: Tất cả</div>
+        <div class="form-preview">Trạng thái</div>
+        <div class="form-preview">Khoảng ngày</div>
+        <button class="btn-preview primary">Lọc</button>
+    </div>
+</section>
+
+<section class="two-column">
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <h2>Doanh thu theo phương thức</h2>
+                <p>Placeholder để xem bố cục trước khi ráp chart.</p>
+            </div>
+        </div>
+        <div class="chart-placeholder">
+            <span style="height: 82%"></span>
+            <span style="height: 56%"></span>
+            <span style="height: 34%"></span>
+        </div>
+        <div class="metric-grid mt-3">
+            <div class="metric-box">VNPay <strong class="d-block">62%</strong></div>
+            <div class="metric-box">MoMo <strong class="d-block">28%</strong></div>
+            <div class="metric-box">Tiền mặt <strong class="d-block">10%</strong></div>
+            <div class="metric-box">Tỉ lệ lỗi <strong class="d-block">2.1%</strong></div>
+        </div>
+    </div>
+
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <h2>Cảnh báo đối soát</h2>
+                <p>Các giao dịch cần admin kiểm tra.</p>
+            </div>
+        </div>
+        <div class="compact-list">
+            <div class="compact-item">
+                <div><strong>VNPay callback chậm</strong><div class="entity-subtitle">TXN-VNP-88621 · BK-2026-0018</div></div>
+                <span class="badge-soft badge-pending">Pending</span>
+            </div>
+            <div class="compact-item">
+                <div><strong>MoMo thanh toán lỗi</strong><div class="entity-subtitle">TXN-MOMO-44180 · Timeout</div></div>
+                <span class="badge-soft badge-failed">Failed</span>
+            </div>
+            <div class="compact-item">
+                <div><strong>Yêu cầu hoàn tiền</strong><div class="entity-subtitle">BK-2026-0011 · Khách hủy</div></div>
+                <span class="badge-soft badge-refunded">Refund</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Danh sách giao dịch</h2>
+            <p>Theo dõi payment status gắn với booking.</p>
+        </div>
+        <span class="badge-soft badge-confirmed">159 giao dịch</span>
+    </div>
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Mã giao dịch</th>
+                    <th>Booking</th>
+                    <th>Khách hàng</th>
+                    <th>Phương thức</th>
+                    <th>Số tiền</th>
+                    <th>Thời gian</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>TXN-VNP-88621</strong><span class="entity-subtitle">Gateway ref: VNP132987</span></td>
+                    <td>BK-2026-0018</td>
+                    <td>Nguyễn Minh Anh</td>
+                    <td>VNPay</td>
+                    <td><strong>2.400.000₫</strong></td>
+                    <td>26/05/2026 09:22</td>
+                    <td><span class="badge-soft badge-pending">Pending</span></td>
+                    <td><div class="action-row"><button class="btn-preview">Chi tiết</button><button class="btn-preview success">Đánh dấu đã xử lý</button></div></td>
+                </tr>
+                <tr>
+                    <td><strong>TXN-MOMO-44219</strong><span class="entity-subtitle">Gateway ref: MOMO7712</span></td>
+                    <td>BK-2026-0017</td>
+                    <td>Trần Quốc Huy</td>
+                    <td>MoMo</td>
+                    <td><strong>1.850.000₫</strong></td>
+                    <td>25/05/2026 18:48</td>
+                    <td><span class="badge-soft badge-completed">Completed</span></td>
+                    <td><div class="action-row"><button class="btn-preview">Hóa đơn</button><button class="btn-preview">Chi tiết</button></div></td>
+                </tr>
+                <tr>
+                    <td><strong>TXN-CASH-2208</strong><span class="entity-subtitle">Thu tại quầy</span></td>
+                    <td>BK-2026-0015</td>
+                    <td>Phạm Gia Bảo</td>
+                    <td>Cash</td>
+                    <td><strong>5.200.000₫</strong></td>
+                    <td>24/05/2026 14:10</td>
+                    <td><span class="badge-soft badge-completed">Completed</span></td>
+                    <td><button class="btn-preview">Biên nhận</button></td>
+                </tr>
+                <tr>
+                    <td><strong>TXN-MOMO-44180</strong><span class="entity-subtitle">Timeout</span></td>
+                    <td>BK-2026-0014</td>
+                    <td>Đặng Hoài Nam</td>
+                    <td>MoMo</td>
+                    <td><strong>980.000₫</strong></td>
+                    <td>23/05/2026 22:01</td>
+                    <td><span class="badge-soft badge-failed">Failed</span></td>
+                    <td><div class="action-row"><button class="btn-preview">Chi tiết</button><button class="btn-preview warning">Thử lại</button></div></td>
+                </tr>
+                <tr>
+                    <td><strong>TXN-VNP-88502</strong><span class="entity-subtitle">Refund request</span></td>
+                    <td>BK-2026-0011</td>
+                    <td>Vũ Khánh Linh</td>
+                    <td>VNPay</td>
+                    <td><strong>4.800.000₫</strong></td>
+                    <td>20/05/2026 11:50</td>
+                    <td><span class="badge-soft badge-refunded">Refunded</span></td>
+                    <td><button class="btn-preview">Lịch sử</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>

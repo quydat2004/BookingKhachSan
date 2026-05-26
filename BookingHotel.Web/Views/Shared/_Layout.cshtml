@@ -1,0 +1,78 @@
+@{
+    var title = ViewData["Title"]?.ToString() ?? "Trang chủ";
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@title - BookingKS</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg web-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand web-brand" asp-controller="Home" asp-action="Index">
+                <span class="brand-mark">BK</span>
+                <span>BookingKS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Hotels" asp-action="Index">Khách sạn</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Bookings" asp-action="My">Booking của tôi</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Payments" asp-action="Process">Thanh toán</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Reviews" asp-action="Create">Review</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Manager" asp-action="Index">Manager</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
+                    <li class="nav-item ms-lg-2"><a class="btn btn-outline-primary rounded-pill px-3" asp-controller="Account" asp-action="Login">Đăng nhập</a></li>
+                    <li class="nav-item"><a class="btn btn-primary rounded-pill px-3" asp-controller="Account" asp-action="Register">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="site-main">
+        @RenderBody()
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand"><span class="brand-mark">BK</span><strong>BookingKS</strong></div>
+                    <p class="text-white-50 mt-3">Nền tảng đặt phòng khách sạn hiện đại, tập trung booking, thanh toán và đánh giá minh bạch.</p>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5>Khám phá</h5>
+                    <a asp-controller="Hotels" asp-action="Index">Khách sạn</a>
+                    <a asp-controller="Home" asp-action="About">Về chúng tôi</a>
+                    <a asp-controller="Home" asp-action="Contact">Liên hệ</a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5>Khách hàng</h5>
+                    <a asp-controller="Bookings" asp-action="My">Booking của tôi</a>
+                    <a asp-controller="Payments" asp-action="Process">Thanh toán</a>
+                    <a asp-controller="Reviews" asp-action="Create">Gửi đánh giá</a>
+                </div>
+                <div class="col-lg-3 col-md-4">
+                    <h5>Hỗ trợ</h5>
+                    <p class="mb-1 text-white-50">Hotline: 1900 2026</p>
+                    <p class="mb-1 text-white-50">Email: support@bookingks.local</p>
+                    <p class="mb-0 text-white-50">Địa chỉ: Huế, Việt Nam</p>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 BookingKS. HTML preview, chưa ráp API.</div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

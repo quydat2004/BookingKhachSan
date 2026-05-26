@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Enums;
 
-namespace BookingHotel.Domain.Enums
+public enum UserRole
 {
-    internal class UserRole
-    {
-    }
+    Admin = 1,
+    HotelManager = 2,
+    Customer = 3,
+    Receptionist = 4,
+    Accountant = 5
 }

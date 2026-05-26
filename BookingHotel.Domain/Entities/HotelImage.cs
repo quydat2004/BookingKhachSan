@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Entities;
 
-namespace BookingHotel.Domain.Entities
+public class Image : Common.BaseEntity
 {
-    internal class HotelImage
-    {
-    }
+    public byte EntityType { get; set; }
+    public int EntityId { get; set; }
+    public string ImageUrl { get; set; } = string.Empty;
+    public bool IsThumbnail { get; set; }
+    public int DisplayOrder { get; set; }
+    public string? AltText { get; set; }
 }

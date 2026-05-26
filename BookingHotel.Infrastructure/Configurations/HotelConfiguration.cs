@@ -1,12 +1,1 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookingHotel.Infrastructure.Configurations
-{
-    internal class HotelConfiguration
-    {
-    }
-}
+namespace BookingHotel.Infrastructure.Configurations;

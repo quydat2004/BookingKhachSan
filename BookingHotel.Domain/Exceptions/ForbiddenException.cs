@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Exceptions;
 
-namespace BookingHotel.Domain.Exceptions
+public class ForbiddenException : DomainException
 {
-    internal class ForbiddenException
-    {
-    }
+    public ForbiddenException(string message = "You do not have permission to perform this action.")
+        : base(message) { }
 }

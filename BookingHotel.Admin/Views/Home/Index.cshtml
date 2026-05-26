@@ -1,0 +1,173 @@
+@{
+    ViewData["Title"] = "Tổng quan hệ thống";
+    ViewData["Subtitle"] = "Theo dõi nhanh booking, thanh toán và review cần xử lý";
+}
+
+<section class="stat-grid">
+    <article class="stat-card">
+        <span>Booking hôm nay</span>
+        <strong>38</strong>
+        <small>+12% so với hôm qua</small>
+    </article>
+    <article class="stat-card">
+        <span>Doanh thu hôm nay</span>
+        <strong>86.400.000₫</strong>
+        <small>VNPay chiếm 62%</small>
+    </article>
+    <article class="stat-card">
+        <span>Thanh toán chờ xử lý</span>
+        <strong>9</strong>
+        <small>Cần đối soát</small>
+    </article>
+    <article class="stat-card">
+        <span>Review chờ duyệt</span>
+        <strong>14</strong>
+        <small>Ưu tiên kiểm duyệt</small>
+    </article>
+</section>
+
+<section class="two-column">
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <h2>Booking 7 ngày gần đây</h2>
+                <p>Biểu đồ placeholder để duyệt bố cục trước khi ráp dữ liệu thật.</p>
+            </div>
+            <a class="btn-preview primary" asp-controller="Bookings" asp-action="Index">Xem booking</a>
+        </div>
+        <div class="chart-placeholder" aria-label="Booking chart placeholder">
+            <span style="height: 44%"></span>
+            <span style="height: 62%"></span>
+            <span style="height: 52%"></span>
+            <span style="height: 76%"></span>
+            <span style="height: 68%"></span>
+            <span style="height: 88%"></span>
+            <span style="height: 72%"></span>
+        </div>
+    </div>
+
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <h2>Việc cần xử lý</h2>
+                <p>Ưu tiên các luồng đang phát triển.</p>
+            </div>
+        </div>
+        <div class="compact-list">
+            <div class="compact-item">
+                <div>
+                    <strong class="entity-title">5 booking chờ xác nhận</strong>
+                    <span class="entity-subtitle">Pending quá 30 phút</span>
+                </div>
+                <span class="badge-soft badge-pending">Booking</span>
+            </div>
+            <div class="compact-item">
+                <div>
+                    <strong class="entity-title">3 giao dịch cần đối soát</strong>
+                    <span class="entity-subtitle">VNPay callback chưa khớp</span>
+                </div>
+                <span class="badge-soft badge-confirmed">Payment</span>
+            </div>
+            <div class="compact-item">
+                <div>
+                    <strong class="entity-title">14 review chờ duyệt</strong>
+                    <span class="entity-subtitle">Có 2 review rating thấp</span>
+                </div>
+                <span class="badge-soft badge-pending">Review</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Booking mới nhất</h2>
+            <p>Dữ liệu mẫu HTML, chưa kết nối API.</p>
+        </div>
+        <a class="btn-preview" asp-controller="Bookings" asp-action="Index">Quản lý booking</a>
+    </div>
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Mã booking</th>
+                    <th>Khách hàng</th>
+                    <th>Khách sạn</th>
+                    <th>Ngày ở</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>BK-2026-0018</strong></td>
+                    <td>Nguyễn Minh Anh</td>
+                    <td>Prestige Sài Gòn</td>
+                    <td>10/06 - 12/06</td>
+                    <td>2.400.000₫</td>
+                    <td><span class="badge-soft badge-pending">Pending</span></td>
+                </tr>
+                <tr>
+                    <td><strong>BK-2026-0017</strong></td>
+                    <td>Trần Quốc Huy</td>
+                    <td>Hue Riverside Hotel</td>
+                    <td>08/06 - 09/06</td>
+                    <td>1.850.000₫</td>
+                    <td><span class="badge-soft badge-confirmed">Confirmed</span></td>
+                </tr>
+                <tr>
+                    <td><strong>BK-2026-0016</strong></td>
+                    <td>Lê Thanh Mai</td>
+                    <td>Đà Nẵng Ocean View</td>
+                    <td>05/06 - 07/06</td>
+                    <td>3.600.000₫</td>
+                    <td><span class="badge-soft badge-completed">CheckedOut</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="two-column">
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <h2>Thanh toán gần đây</h2>
+                <p>Kiểm tra nhanh trạng thái giao dịch.</p>
+            </div>
+            <a class="btn-preview" asp-controller="Payments" asp-action="Index">Xem thanh toán</a>
+        </div>
+        <div class="timeline-list">
+            <div class="timeline-item">
+                <div><strong>TXN-VNP-88621</strong><div class="entity-subtitle">BK-2026-0018 · VNPay</div></div>
+                <div><strong>2.400.000₫</strong><div><span class="badge-soft badge-pending">Pending</span></div></div>
+            </div>
+            <div class="timeline-item">
+                <div><strong>TXN-MOMO-44219</strong><div class="entity-subtitle">BK-2026-0017 · MoMo</div></div>
+                <div><strong>1.850.000₫</strong><div><span class="badge-soft badge-completed">Completed</span></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="admin-card">
+        <div class="admin-card-header">
+            <div>
+                <h2>Review chờ duyệt</h2>
+                <p>Nội dung mới từ khách hàng.</p>
+            </div>
+            <a class="btn-preview" asp-controller="Reviews" asp-action="Index">Duyệt review</a>
+        </div>
+        <div class="review-card">
+            <div class="d-flex justify-content-between gap-3">
+                <div>
+                    <strong class="entity-title">Prestige Sài Gòn</strong>
+                    <span class="entity-subtitle">Phạm Gia Bảo · 26/05/2026</span>
+                </div>
+                <span class="badge-soft badge-pending">Chờ duyệt</span>
+            </div>
+            <div class="review-stars my-2">★★★★☆</div>
+            <p class="mb-0 text-muted">Phòng sạch, nhân viên hỗ trợ nhanh. Cần cải thiện tốc độ check-in giờ cao điểm.</p>
+        </div>
+    </div>
+</section>

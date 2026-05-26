@@ -1,0 +1,85 @@
+@{
+    ViewData["Title"] = "Trang chủ";
+}
+
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="section-subtitle text-warning">BookingKS Preview</span>
+                <h1 class="mt-3">Đặt phòng nhanh, thanh toán rõ, đánh giá minh bạch.</h1>
+                <p class="mt-3">Prototype HTML cho hệ thống đặt phòng khách sạn, tập trung vào booking, payment và review trước khi ráp API.</p>
+                <div class="d-flex gap-3 flex-wrap mt-4">
+                    <a class="btn btn-primary btn-lg rounded-pill px-4" asp-controller="Hotels" asp-action="Index">Tìm khách sạn</a>
+                    <a class="btn btn-outline-light btn-lg rounded-pill px-4" asp-controller="Bookings" asp-action="My">Booking của tôi</a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="hero-search">
+                    <div class="row g-3">
+                        <div class="col-12"><div class="form-preview">Điểm đến: Huế, Đà Nẵng, TP.HCM...</div></div>
+                        <div class="col-md-6"><div class="form-preview">Nhận phòng: 10/06/2026</div></div>
+                        <div class="col-md-6"><div class="form-preview">Trả phòng: 12/06/2026</div></div>
+                        <div class="col-md-6"><div class="form-preview">2 khách</div></div>
+                        <div class="col-md-6"><a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-center rounded-4" asp-controller="Hotels" asp-action="Index">Tìm ngay</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <span class="section-subtitle">Khách sạn nổi bật</span>
+            <h2 class="section-title mt-2">Lựa chọn được đặt nhiều</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="hotel-card">
+                    <div class="hotel-image">Ảnh khách sạn</div>
+                    <div class="hotel-content">
+                        <div class="rating">★★★★★ <span class="text-muted">4.8 (128)</span></div>
+                        <h3 class="hotel-name">Prestige Sài Gòn</h3>
+                        <p class="text-muted">Quận 1, TP. Hồ Chí Minh · Gần phố đi bộ Nguyễn Huệ</p>
+                        <div class="d-flex justify-content-between align-items-end"><div><span class="text-muted">Từ</span><div class="price">1.200.000₫</div></div><a class="btn btn-outline-primary rounded-pill" asp-controller="Hotels" asp-action="Details">Chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="hotel-card">
+                    <div class="hotel-image">Ảnh khách sạn</div>
+                    <div class="hotel-content">
+                        <div class="rating">★★★★☆ <span class="text-muted">4.6 (96)</span></div>
+                        <h3 class="hotel-name">Hue Riverside Hotel</h3>
+                        <p class="text-muted">Trung tâm Huế · View sông Hương</p>
+                        <div class="d-flex justify-content-between align-items-end"><div><span class="text-muted">Từ</span><div class="price">950.000₫</div></div><a class="btn btn-outline-primary rounded-pill" asp-controller="Hotels" asp-action="Details">Chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="hotel-card">
+                    <div class="hotel-image">Ảnh khách sạn</div>
+                    <div class="hotel-content">
+                        <div class="rating">★★★★★ <span class="text-muted">4.9 (203)</span></div>
+                        <h3 class="hotel-name">Đà Nẵng Ocean View</h3>
+                        <p class="text-muted">Biển Mỹ Khê · Suite hướng biển</p>
+                        <div class="d-flex justify-content-between align-items-end"><div><span class="text-muted">Từ</span><div class="price">1.800.000₫</div></div><a class="btn btn-outline-primary rounded-pill" asp-controller="Hotels" asp-action="Details">Chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section bg-white">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6"><div class="card-soft p-4 h-100"><h4 class="fw-bold">Đặt nhanh</h4><p class="text-muted mb-0">Chọn khách sạn, phòng và ngày ở trong một flow rõ ràng.</p></div></div>
+            <div class="col-lg-3 col-md-6"><div class="card-soft p-4 h-100"><h4 class="fw-bold">Thanh toán an toàn</h4><p class="text-muted mb-0">Preview VNPay, MoMo và tiền mặt theo booking.</p></div></div>
+            <div class="col-lg-3 col-md-6"><div class="card-soft p-4 h-100"><h4 class="fw-bold">Theo dõi trạng thái</h4><p class="text-muted mb-0">Pending, Confirmed, CheckedIn, CheckedOut, Cancelled.</p></div></div>
+            <div class="col-lg-3 col-md-6"><div class="card-soft p-4 h-100"><h4 class="fw-bold">Review thật</h4><p class="text-muted mb-0">Đánh giá sau checkout, có điểm thành phần.</p></div></div>
+        </div>
+    </div>
+</section>

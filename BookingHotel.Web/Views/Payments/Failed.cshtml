@@ -1,0 +1,5 @@
+@{
+    ViewData["Title"] = "Thanh toán thất bại";
+}
+
+<section class="section"><div class="container"><div class="content-card p-5 text-center mx-auto" style="max-width:760px"><span class="badge-soft badge-failed mb-3">Failed</span><h1 class="fw-bold">Thanh toán chưa hoàn tất</h1><p class="text-muted">Giao dịch bị hủy hoặc cổng thanh toán chưa phản hồi. Đây là màn hình HTML preview.</p><div class="metric-grid text-start my-4"><div class="metric-box">Mã booking <strong>BK-2026-0018</strong></div><div class="metric-box">Lý do <strong>Gateway timeout</strong></div><div class="metric-box">Số tiền <strong>2.508.000₫</strong></div><div class="metric-box">Trạng thái <strong>Pending</strong></div></div><div class="d-flex justify-content-center gap-3 flex-wrap"><a class="btn btn-primary rounded-pill px-4" asp-controller="Payments" asp-action="Process">Thử lại</a><a class="btn btn-outline-primary rounded-pill px-4" asp-controller="Bookings" asp-action="Details">Xem booking</a></div></div></div></section>

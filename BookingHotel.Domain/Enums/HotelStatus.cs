@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Enums;
 
-namespace BookingHotel.Domain.Enums
+public enum HotelStatus
 {
-    internal class HotelStatus
-    {
-    }
+    Pending,
+    Approved,
+    Rejected,
+    Suspended
 }

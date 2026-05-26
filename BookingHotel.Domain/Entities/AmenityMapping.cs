@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Entities;
 
-namespace BookingHotel.Domain.Entities
+public class HotelAmenity
 {
-    internal class AmenityMapping
-    {
-    }
+    public int Id { get; set; }
+    public int HotelId { get; set; }
+    public int AmenityId { get; set; }
+
+    public Hotel Hotel { get; set; } = null!;
+    public Amenity Amenity { get; set; } = null!;
 }

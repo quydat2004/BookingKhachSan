@@ -1,0 +1,43 @@
+@{
+    ViewData["Title"] = "Booking của tôi";
+}
+
+<section class="page-hero">
+    <div class="container">
+        <span class="section-subtitle">Customer booking</span>
+        <h1>Booking của tôi</h1>
+        <p class="text-muted mb-0">Theo dõi trạng thái đặt phòng và hành động tiếp theo.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="d-flex gap-2 flex-wrap mb-4">
+            <button class="btn btn-primary rounded-pill">Tất cả</button>
+            <button class="btn btn-outline-primary rounded-pill">Pending</button>
+            <button class="btn btn-outline-primary rounded-pill">Confirmed</button>
+            <button class="btn btn-outline-primary rounded-pill">CheckedIn</button>
+            <button class="btn btn-outline-primary rounded-pill">CheckedOut</button>
+            <button class="btn btn-outline-primary rounded-pill">Cancelled</button>
+        </div>
+
+        <div class="booking-card p-4 mb-3">
+            <div class="booking-row">
+                <div><span class="badge-soft badge-pending">Pending</span><h3 class="fw-bold mt-2">BK-2026-0018 · Prestige Sài Gòn</h3><p class="text-muted mb-0">10/06/2026 - 12/06/2026 · 2 khách · Deluxe King</p></div>
+                <div class="text-lg-end"><div class="price">2.508.000₫</div><div class="d-flex gap-2 mt-3 flex-wrap"><a class="btn btn-outline-primary rounded-pill" asp-controller="Bookings" asp-action="Details">Chi tiết</a><button class="btn btn-outline-danger rounded-pill">Hủy</button></div></div>
+            </div>
+        </div>
+        <div class="booking-card p-4 mb-3">
+            <div class="booking-row">
+                <div><span class="badge-soft badge-confirmed">Confirmed</span><h3 class="fw-bold mt-2">BK-2026-0017 · Hue Riverside Hotel</h3><p class="text-muted mb-0">08/06/2026 - 09/06/2026 · 1 khách · Superior River</p></div>
+                <div class="text-lg-end"><div class="price">1.850.000₫</div><div class="d-flex gap-2 mt-3 flex-wrap"><a class="btn btn-outline-primary rounded-pill" asp-controller="Bookings" asp-action="Details">Chi tiết</a><a class="btn btn-primary rounded-pill" asp-controller="Payments" asp-action="Process">Thanh toán</a></div></div>
+            </div>
+        </div>
+        <div class="booking-card p-4 mb-3">
+            <div class="booking-row">
+                <div><span class="badge-soft badge-completed">CheckedOut</span><h3 class="fw-bold mt-2">BK-2026-0013 · Hà Nội Boutique</h3><p class="text-muted mb-0">22/05/2026 - 23/05/2026 · 2 khách · Standard Queen</p></div>
+                <div class="text-lg-end"><div class="price">1.250.000₫</div><div class="d-flex gap-2 mt-3 flex-wrap"><a class="btn btn-outline-primary rounded-pill" asp-controller="Bookings" asp-action="Details">Chi tiết</a><a class="btn btn-primary rounded-pill" asp-controller="Reviews" asp-action="Create">Đánh giá</a></div></div>
+            </div>
+        </div>
+    </div>
+</section>

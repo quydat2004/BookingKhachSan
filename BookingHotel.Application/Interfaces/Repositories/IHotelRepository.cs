@@ -1,12 +1,1 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BookingHotel.Application.Interfaces.Repositories
-{
-    internal class IHotelRepository
-    {
-    }
-}
+namespace BookingHotel.Application.Interfaces.Repositories;

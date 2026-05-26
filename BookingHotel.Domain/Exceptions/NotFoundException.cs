@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Exceptions;
 
-namespace BookingHotel.Domain.Exceptions
+public class NotFoundException : DomainException
 {
-    internal class NotFoundException
-    {
-    }
+    public NotFoundException(string name, object key)
+        : base($"Entity \"{name}\" ({key}) was not found.") { }
 }

@@ -1,0 +1,150 @@
+@{
+    ViewData["Title"] = "Quản lý booking";
+    ViewData["Subtitle"] = "Theo dõi đặt phòng, xác nhận, check-in, check-out và hủy booking";
+}
+
+<section class="stat-grid">
+    <article class="stat-card"><span>Pending</span><strong>12</strong><small>Cần xác nhận</small></article>
+    <article class="stat-card"><span>Confirmed</span><strong>24</strong><small>Sắp nhận phòng</small></article>
+    <article class="stat-card"><span>Checked-in</span><strong>8</strong><small>Đang lưu trú</small></article>
+    <article class="stat-card"><span>Checked-out</span><strong>41</strong><small>Hoàn tất tháng này</small></article>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Bộ lọc booking</h2>
+            <p>HTML preview, chưa xử lý submit.</p>
+        </div>
+        <button class="btn-preview primary">Xuất báo cáo</button>
+    </div>
+    <div class="filter-bar">
+        <div class="form-preview">Mã booking, tên khách...</div>
+        <div class="form-preview">Trạng thái: Tất cả</div>
+        <div class="form-preview">Khách sạn</div>
+        <div class="form-preview">Ngày nhận phòng</div>
+        <button class="btn-preview primary">Lọc</button>
+    </div>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Danh sách booking</h2>
+            <p>Tập trung lifecycle: Pending → Confirmed → CheckedIn → CheckedOut.</p>
+        </div>
+        <span class="badge-soft badge-confirmed">85 booking</span>
+    </div>
+
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Mã booking</th>
+                    <th>Khách hàng</th>
+                    <th>Khách sạn / phòng</th>
+                    <th>Ngày ở</th>
+                    <th>Khách</th>
+                    <th>Tổng tiền</th>
+                    <th>Trạng thái</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>BK-2026-0018</strong><span class="entity-subtitle">Tạo 26/05/2026 09:18</span></td>
+                    <td><span class="entity-title">Nguyễn Minh Anh</span><span class="entity-subtitle">minhanh@email.com</span></td>
+                    <td><span class="entity-title">Prestige Sài Gòn</span><span class="entity-subtitle">Deluxe King · P.1204</span></td>
+                    <td>10/06/2026<br />12/06/2026</td>
+                    <td>2 người</td>
+                    <td><strong>2.400.000₫</strong></td>
+                    <td><span class="badge-soft badge-pending">Pending</span></td>
+                    <td>
+                        <div class="action-row">
+                            <button class="btn-preview">Chi tiết</button>
+                            <button class="btn-preview success">Xác nhận</button>
+                            <button class="btn-preview danger">Hủy</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>BK-2026-0017</strong><span class="entity-subtitle">Tạo 25/05/2026 18:42</span></td>
+                    <td><span class="entity-title">Trần Quốc Huy</span><span class="entity-subtitle">0938 222 111</span></td>
+                    <td><span class="entity-title">Hue Riverside Hotel</span><span class="entity-subtitle">Superior River · P.502</span></td>
+                    <td>08/06/2026<br />09/06/2026</td>
+                    <td>1 người</td>
+                    <td><strong>1.850.000₫</strong></td>
+                    <td><span class="badge-soft badge-confirmed">Confirmed</span></td>
+                    <td>
+                        <div class="action-row">
+                            <button class="btn-preview">Chi tiết</button>
+                            <button class="btn-preview warning">Check-in</button>
+                            <button class="btn-preview danger">Hủy</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>BK-2026-0015</strong><span class="entity-subtitle">Tạo 24/05/2026 13:05</span></td>
+                    <td><span class="entity-title">Phạm Gia Bảo</span><span class="entity-subtitle">giabao@email.com</span></td>
+                    <td><span class="entity-title">Đà Nẵng Ocean View</span><span class="entity-subtitle">Family Suite · P.808</span></td>
+                    <td>24/05/2026<br />27/05/2026</td>
+                    <td>4 người</td>
+                    <td><strong>5.200.000₫</strong></td>
+                    <td><span class="badge-soft badge-checkedin">CheckedIn</span></td>
+                    <td>
+                        <div class="action-row">
+                            <button class="btn-preview">Chi tiết</button>
+                            <button class="btn-preview primary">Check-out</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>BK-2026-0013</strong><span class="entity-subtitle">Tạo 21/05/2026 08:20</span></td>
+                    <td><span class="entity-title">Lê Thanh Mai</span><span class="entity-subtitle">maile@email.com</span></td>
+                    <td><span class="entity-title">Hà Nội Boutique</span><span class="entity-subtitle">Standard Queen · P.306</span></td>
+                    <td>22/05/2026<br />23/05/2026</td>
+                    <td>2 người</td>
+                    <td><strong>1.250.000₫</strong></td>
+                    <td><span class="badge-soft badge-completed">CheckedOut</span></td>
+                    <td>
+                        <div class="action-row">
+                            <button class="btn-preview">Chi tiết</button>
+                            <button class="btn-preview">Hóa đơn</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>BK-2026-0011</strong><span class="entity-subtitle">Tạo 20/05/2026 11:34</span></td>
+                    <td><span class="entity-title">Vũ Khánh Linh</span><span class="entity-subtitle">linhvu@email.com</span></td>
+                    <td><span class="entity-title">Nha Trang Bay Resort</span><span class="entity-subtitle">Ocean Suite</span></td>
+                    <td>01/06/2026<br />03/06/2026</td>
+                    <td>2 người</td>
+                    <td><strong>4.800.000₫</strong></td>
+                    <td><span class="badge-soft badge-cancelled">Cancelled</span></td>
+                    <td><button class="btn-preview">Chi tiết</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Chi tiết booking mẫu</h2>
+            <p>Khu vực này mô phỏng panel chi tiết khi admin bấm vào một booking.</p>
+        </div>
+        <span class="badge-soft badge-pending">BK-2026-0018</span>
+    </div>
+    <div class="row g-3">
+        <div class="col-lg-4">
+            <div class="metric-box"><span>Khách hàng</span><strong class="d-block">Nguyễn Minh Anh</strong></div>
+        </div>
+        <div class="col-lg-4">
+            <div class="metric-box"><span>Phòng</span><strong class="d-block">Deluxe King · P.1204</strong></div>
+        </div>
+        <div class="col-lg-4">
+            <div class="metric-box"><span>Ghi chú</span><strong class="d-block">Yêu cầu phòng yên tĩnh</strong></div>
+        </div>
+    </div>
+</section>

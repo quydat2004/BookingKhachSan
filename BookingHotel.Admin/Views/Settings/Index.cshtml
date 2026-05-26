@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Cấu hình";
+    ViewData["Subtitle"] = "Trang sơ bộ cho các thiết lập hệ thống";
+}
+
+<section class="two-column">
+    <div class="admin-card">
+        <div class="admin-card-header"><div><h2>Cổng thanh toán</h2><p>Preview trạng thái cấu hình.</p></div></div>
+        <div class="compact-list">
+            <div class="compact-item"><div><strong>VNPay Sandbox</strong><div class="entity-subtitle">TmnCode, HashSecret</div></div><span class="badge-soft badge-pending">Chưa cấu hình</span></div>
+            <div class="compact-item"><div><strong>MoMo Sandbox</strong><div class="entity-subtitle">PartnerCode, AccessKey</div></div><span class="badge-soft badge-pending">Chưa cấu hình</span></div>
+            <div class="compact-item"><div><strong>Cash</strong><div class="entity-subtitle">Thu tiền tại quầy</div></div><span class="badge-soft badge-completed">Sẵn sàng</span></div>
+        </div>
+    </div>
+
+    <div class="admin-card">
+        <div class="admin-card-header"><div><h2>Kiểm duyệt review</h2><p>Preview rule vận hành.</p></div></div>
+        <div class="compact-list">
+            <div class="compact-item"><div><strong>Review mới</strong><div class="entity-subtitle">Mặc định chờ duyệt</div></div><span class="badge-soft badge-confirmed">Enabled</span></div>
+            <div class="compact-item"><div><strong>Chỉ sau checkout</strong><div class="entity-subtitle">Khách đã hoàn tất lưu trú</div></div><span class="badge-soft badge-confirmed">Enabled</span></div>
+            <div class="compact-item"><div><strong>Chống review trùng</strong><div class="entity-subtitle">Một booking một review</div></div><span class="badge-soft badge-confirmed">Enabled</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="admin-card">
+    <div class="empty-note">Trang này chỉ là HTML preview. Khi ráp code thật mới nối appsettings, API và phân quyền admin.</div>
+</section>

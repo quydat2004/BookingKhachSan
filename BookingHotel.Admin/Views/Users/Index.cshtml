@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Người dùng";
+    ViewData["Subtitle"] = "Trang sơ bộ, chưa tập trung trong giai đoạn này";
+}
+
+<section class="stat-grid">
+    <article class="stat-card"><span>Tổng người dùng</span><strong>1.284</strong><small>Mock data</small></article>
+    <article class="stat-card"><span>Khách hàng</span><strong>1.102</strong><small>Customer</small></article>
+    <article class="stat-card"><span>Quản lý khách sạn</span><strong>164</strong><small>Manager</small></article>
+    <article class="stat-card"><span>Admin</span><strong>18</strong><small>System</small></article>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div><h2>Danh sách người dùng mẫu</h2><p>Chỉ dựng sơ để hoàn thiện navigation.</p></div>
+    </div>
+    <div class="table-wrap">
+        <table class="admin-table">
+            <thead><tr><th>Người dùng</th><th>Email</th><th>Vai trò</th><th>Trạng thái</th><th>Thao tác</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Nguyễn Minh Anh</strong></td><td>minhanh@email.com</td><td>Customer</td><td><span class="badge-soft badge-completed">Active</span></td><td><button class="btn-preview">Chi tiết</button></td></tr>
+                <tr><td><strong>Lê Quang Dũng</strong></td><td>dung.manager@email.com</td><td>HotelManager</td><td><span class="badge-soft badge-completed">Active</span></td><td><button class="btn-preview">Chi tiết</button></td></tr>
+                <tr><td><strong>Admin BookingKS</strong></td><td>admin@bookingks.local</td><td>Admin</td><td><span class="badge-soft badge-confirmed">System</span></td><td><button class="btn-preview">Quyền</button></td></tr>
+            </tbody>
+        </table>
+    </div>
+</section>

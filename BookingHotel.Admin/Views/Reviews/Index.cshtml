@@ -1,0 +1,124 @@
+@{
+    ViewData["Title"] = "Review đánh giá";
+    ViewData["Subtitle"] = "Duyệt, từ chối và theo dõi chất lượng đánh giá của khách hàng";
+}
+
+<section class="stat-grid">
+    <article class="stat-card"><span>Chờ duyệt</span><strong>14</strong><small>Ưu tiên hôm nay</small></article>
+    <article class="stat-card"><span>Đã duyệt</span><strong>286</strong><small>Public review</small></article>
+    <article class="stat-card"><span>Rating trung bình</span><strong>4.6</strong><small>Trên 5 sao</small></article>
+    <article class="stat-card"><span>Review bị từ chối</span><strong>8</strong><small>Tháng này</small></article>
+</section>
+
+<section class="admin-card">
+    <div class="admin-card-header">
+        <div>
+            <h2>Bộ lọc review</h2>
+            <p>HTML preview, chưa xử lý duyệt thật.</p>
+        </div>
+        <button class="btn-preview primary">Duyệt hàng loạt</button>
+    </div>
+    <div class="filter-bar">
+        <div class="form-preview">Tìm khách sạn, khách hàng, nội dung...</div>
+        <div class="form-preview">Trạng thái: Chờ duyệt</div>
+        <div class="form-preview">Rating: Tất cả</div>
+        <div class="form-preview">Khách sạn</div>
+        <button class="btn-preview primary">Lọc</button>
+    </div>
+</section>
+
+<section class="review-grid">
+    <article class="review-card">
+        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+            <div>
+                <strong class="entity-title">Prestige Sài Gòn</strong>
+                <span class="entity-subtitle">Phạm Gia Bảo · BK-2026-0015 · 26/05/2026</span>
+            </div>
+            <span class="badge-soft badge-pending">Chờ duyệt</span>
+        </div>
+        <div class="review-stars">★★★★☆ <span class="text-dark ms-2">4/5</span></div>
+        <h3 class="h6 fw-bold mt-3">Phòng sạch, vị trí thuận tiện</h3>
+        <p class="text-muted">Phòng sạch và đúng hình. Nhân viên hỗ trợ nhanh. Khu vực check-in hơi đông vào buổi tối nên cần thêm nhân sự.</p>
+        <div class="metric-grid">
+            <div class="metric-box">Nhân viên <strong>5</strong></div>
+            <div class="metric-box">Sạch sẽ <strong>5</strong></div>
+            <div class="metric-box">Thoải mái <strong>4</strong></div>
+            <div class="metric-box">Giá trị <strong>4</strong></div>
+        </div>
+        <div class="action-row">
+            <button class="btn-preview success">Duyệt</button>
+            <button class="btn-preview danger">Từ chối</button>
+            <button class="btn-preview">Xem booking</button>
+        </div>
+    </article>
+
+    <article class="review-card">
+        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+            <div>
+                <strong class="entity-title">Hue Riverside Hotel</strong>
+                <span class="entity-subtitle">Nguyễn Minh Anh · BK-2026-0012 · 25/05/2026</span>
+            </div>
+            <span class="badge-soft badge-pending">Chờ duyệt</span>
+        </div>
+        <div class="review-stars">★★★☆☆ <span class="text-dark ms-2">3/5</span></div>
+        <h3 class="h6 fw-bold mt-3">Cảnh đẹp nhưng phòng hơi ồn</h3>
+        <p class="text-muted">View sông đẹp, bữa sáng ổn. Phòng gần thang máy nên buổi tối hơi ồn, cần ghi chú rõ khi đặt phòng.</p>
+        <div class="metric-grid">
+            <div class="metric-box">Nhân viên <strong>4</strong></div>
+            <div class="metric-box">Sạch sẽ <strong>3</strong></div>
+            <div class="metric-box">Thoải mái <strong>3</strong></div>
+            <div class="metric-box">Giá trị <strong>3</strong></div>
+        </div>
+        <div class="action-row">
+            <button class="btn-preview success">Duyệt</button>
+            <button class="btn-preview danger">Từ chối</button>
+            <button class="btn-preview">Liên hệ khách</button>
+        </div>
+    </article>
+
+    <article class="review-card">
+        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+            <div>
+                <strong class="entity-title">Đà Nẵng Ocean View</strong>
+                <span class="entity-subtitle">Trần Quốc Huy · BK-2026-0009 · 24/05/2026</span>
+            </div>
+            <span class="badge-soft badge-completed">Đã duyệt</span>
+        </div>
+        <div class="review-stars">★★★★★ <span class="text-dark ms-2">5/5</span></div>
+        <h3 class="h6 fw-bold mt-3">Rất đáng tiền</h3>
+        <p class="text-muted">Suite rộng, view biển đẹp, nhân viên thân thiện. Gia đình tôi sẽ quay lại trong kỳ nghỉ sau.</p>
+        <div class="metric-grid">
+            <div class="metric-box">Nhân viên <strong>5</strong></div>
+            <div class="metric-box">Sạch sẽ <strong>5</strong></div>
+            <div class="metric-box">Thoải mái <strong>5</strong></div>
+            <div class="metric-box">Giá trị <strong>5</strong></div>
+        </div>
+        <div class="action-row">
+            <button class="btn-preview">Ẩn review</button>
+            <button class="btn-preview">Xem public</button>
+        </div>
+    </article>
+
+    <article class="review-card">
+        <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+            <div>
+                <strong class="entity-title">Nha Trang Bay Resort</strong>
+                <span class="entity-subtitle">Ẩn danh · BK-2026-0007 · 22/05/2026</span>
+            </div>
+            <span class="badge-soft badge-cancelled">Từ chối</span>
+        </div>
+        <div class="review-stars">★☆☆☆☆ <span class="text-dark ms-2">1/5</span></div>
+        <h3 class="h6 fw-bold mt-3">Nội dung cần kiểm tra</h3>
+        <p class="text-muted">Review bị từ chối vì chứa nội dung không phù hợp. Card này chỉ để admin xem trạng thái xử lý.</p>
+        <div class="metric-grid">
+            <div class="metric-box">Nhân viên <strong>1</strong></div>
+            <div class="metric-box">Sạch sẽ <strong>2</strong></div>
+            <div class="metric-box">Thoải mái <strong>1</strong></div>
+            <div class="metric-box">Giá trị <strong>1</strong></div>
+        </div>
+        <div class="action-row">
+            <button class="btn-preview">Xem lý do</button>
+            <button class="btn-preview warning">Khôi phục</button>
+        </div>
+    </article>
+</section>

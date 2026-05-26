@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,21 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BookingHotel.Domain\BookingHotel.Domain.csproj" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.11.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.11.0" />
+    <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.10" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\" />
-    <Folder Include="Features\Auth\" />
-    <Folder Include="Features\Hotels\" />
-    <Folder Include="Features\Users\" />
-    <Folder Include="Features\Vouchers\" />
-    <Folder Include="Features\Reviews\" />
-    <Folder Include="Features\Payments\" />
-    <Folder Include="Features\Rooms\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Validators\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\BookingHotel.Domain\BookingHotel.Domain.csproj" />
   </ItemGroup>
 
 </Project>

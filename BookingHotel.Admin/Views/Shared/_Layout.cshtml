@@ -1,0 +1,70 @@
+@{
+    var pageTitle = ViewData["Title"]?.ToString() ?? "Tổng quan";
+    var pageSubtitle = ViewData["Subtitle"]?.ToString();
+}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@pageTitle - BookingKS Admin</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="admin-shell">
+        <aside class="admin-sidebar">
+            <a class="admin-brand" asp-controller="Home" asp-action="Index">
+                <span class="admin-brand-mark">BK</span>
+                <span>
+                    <strong>BookingKS</strong>
+                    <small>Admin Panel</small>
+                </span>
+            </a>
+
+            <nav class="admin-nav">
+                <p class="admin-nav-title">Trọng tâm</p>
+                <a asp-controller="Home" asp-action="Index">Tổng quan</a>
+                <a asp-controller="Bookings" asp-action="Index">Booking</a>
+                <a asp-controller="Payments" asp-action="Index">Thanh toán</a>
+                <a asp-controller="Reviews" asp-action="Index">Review đánh giá</a>
+
+                <p class="admin-nav-title">Quản lý sơ bộ</p>
+                <a asp-controller="Hotels" asp-action="Index">Khách sạn</a>
+                <a asp-controller="Users" asp-action="Index">Người dùng</a>
+                <a asp-controller="Settings" asp-action="Index">Cấu hình</a>
+            </nav>
+
+            <div class="admin-sidebar-footer">
+                <span>Preview HTML</span>
+                <strong>Chưa ráp API</strong>
+            </div>
+        </aside>
+
+        <div class="admin-main">
+            <header class="admin-topbar">
+                <div>
+                    <h1>@pageTitle</h1>
+                    @if (!string.IsNullOrWhiteSpace(pageSubtitle))
+                    {
+                        <p>@pageSubtitle</p>
+                    }
+                </div>
+                <div class="admin-topbar-actions">
+                    <div class="admin-search">Tìm kiếm nhanh...</div>
+                    <div class="admin-user">Admin</div>
+                </div>
+            </header>
+
+            <main class="admin-content">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Interfaces;
 
-namespace BookingHotel.Domain.Interfaces
+public interface ICurrentUser
 {
-    internal class ICurrentUser
-    {
-    }
+    int? UserId { get; }
+    string? Email { get; }
+    string[] Roles { get; }
+    bool IsAuthenticated { get; }
+    bool IsInRole(string role);
 }

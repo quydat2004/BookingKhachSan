@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Exceptions;
 
-namespace BookingHotel.Domain.Exceptions
+public class ValidationException : DomainException
 {
-    internal class ValidationException
+    public IDictionary<string, string[]> Errors { get; }
+
+    public ValidationException(string message) : base(message)
     {
+        Errors = new Dictionary<string, string[]>();
+    }
+
+    public ValidationException(string message, IDictionary<string, string[]> errors) : base(message)
+    {
+        Errors = errors;
     }
 }

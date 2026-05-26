@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace BookingHotel.Domain.Entities;
 
-namespace BookingHotel.Domain.Entities
+public class Room : Common.BaseAuditableEntity
 {
-    internal class Room
-    {
-    }
+    public int HotelId { get; set; }
+    public int RoomTypeId { get; set; }
+    public string RoomNumber { get; set; } = string.Empty;
+    public int? FloorNumber { get; set; }
+    public string Status { get; set; } = "Available";
+    public bool IsActive { get; set; } = true;
+    public string? Notes { get; set; }
+
+    public Hotel Hotel { get; set; } = null!;
+    public RoomType RoomType { get; set; } = null!;
+    public ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
 }
